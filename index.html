@@ -39,24 +39,32 @@
   }
 
   .tier {
-    background: #ffffff;
+    position: relative;
+    overflow: hidden;
     border-radius: 16px;
     border: 1px solid #ddd;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
     width: 320px;
     text-align: left;
-    transition: transform 0.3s ease;
+    color: white;
   }
 
-  .tier:hover {
-    transform: translateY(-6px);
-    border-color: #ff3c38;
+  .tier::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+  }
+
+  .tier * {
+    position: relative;
+    z-index: 1;
   }
 
   .tier h3 {
     font-size: 1.5em;
-    color: #1d3557;
     margin: 10px 0;
   }
 
@@ -64,13 +72,13 @@
     display: block;
     font-size: 1.2em;
     font-weight: bold;
-    color: #ff005c;
+    color: #ffb3c6;
     margin-bottom: 10px;
   }
 
   .tier ul {
     padding-left: 18px;
-    color: #333;
+    color: #fff;
   }
 
   .tier ul li {
@@ -79,26 +87,16 @@
 
   .tier-tier3 {
     margin-top: 40px;
+    background: #ffffff;
+    color: #333;
   }
 
-  .tier.tier1 {
+  .tier1 {
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAIAAADwf7zUAAEAAElEQVR4nFT9684s27IkCJmZR85dVQ1qblUNtIQQdEGL9384amW4GT/Mc+5C55wlnXWZ35eRI3y42835//w//UeCwBokGCRQADGAYs/ErzAejJ3PAMQmAiwxAbIRFSyhzU') center/cover no-repeat;
-    color: white;
-    position: relative;
-    overflow: hidden;
   }
 
-  .tier.tier1::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    z-index: 0;
-  }
-
-  .tier.tier1 * {
-    position: relative;
-    z-index: 1;
+  .tier2 {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAIAAADwf7zUAAEAAElEQVR4nEz92Y6ta3YdiI0x57fWitjNabJjL7JUpuUSRMliSSpQsgoG7Gewb33jS79GXZTfw3cGXBAKMMoNqpFJiiJFFsmkRCazY2YyycyTeZrdRMRa35zDF2P+kTpA5m') center/cover no-repeat;
   }
 </style>
 
@@ -121,7 +119,7 @@
     </div>
 
     <!-- Tier 2 -->
-    <div class="tier">
+    <div class="tier tier2">
       <h3>2nd Tier: Fire & Flavor</h3>
       <span class="price-tag">$65 per person</span>
       <ul>
