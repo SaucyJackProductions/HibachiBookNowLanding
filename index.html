@@ -46,15 +46,18 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
     width: 320px;
+    min-height: 420px;
     text-align: left;
     color: white;
+    background-size: cover;
+    background-position: center;
   }
 
   .tier::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.25);
     z-index: 0;
   }
 
@@ -85,18 +88,25 @@
     margin-bottom: 6px;
   }
 
-  .tier-tier3 {
-    margin-top: 40px;
+  .tier1 {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAIAAADwf7zUAAEAAElEQVR4nFT9684s27IkCJmZR85dVQ1qblUNtIQQdEGL9384amW4GT/Mc+5C55wlnXWZ35eRI3y42835//w//UeCwBokGCRQADGAYs/ErzAejJ3PAMQmAiwxAbIRFSyhzUKjOIipAWIGiExyEkgJDBDk');
+  }
+
+  .tier2 {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAIAAADwf7zUAAEAAElEQVR4nEz92Y6ta3YdiI0x57fWitjNabJjL7JUpuUSRMliSSpQsgoG7Gewb33jS79GXZTfw3cGXBAKMMoNqpFJiiJFFsmkRCazY2YyycyTeZrdRMRa35zDF2P+kTpA5mn23hEr/v9r5hzd5M995SOC');
+  }
+
+  .tier3 {
     background: #ffffff;
     color: #333;
   }
 
-  .tier1 {
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAIAAADwf7zUAAEAAElEQVR4nFT9684s27IkCJmZR85dVQ1qblUNtIQQdEGL9384amW4GT/Mc+5C55wlnXWZ35eRI3y42835//w//UeCwBokGCRQADGAYs/ErzAejJ3PAMQmAiwxAbIRFSyhzU') center/cover no-repeat;
+  .tier3 * {
+    color: #333;
   }
 
-  .tier2 {
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAIAAADwf7zUAAEAAElEQVR4nEz92Y6ta3YdiI0x57fWitjNabJjL7JUpuUSRMliSSpQsgoG7Gewb33jS79GXZTfw3cGXBAKMMoNqpFJiiJFFsmkRCazY2YyycyTeZrdRMRa35zDF2P+kTpA5m') center/cover no-repeat;
+  .tier3::before {
+    display: none;
   }
 </style>
 
@@ -134,7 +144,7 @@
 
   <!-- Tier 3 -->
   <div class="tier-wrapper tier-tier3">
-    <div class="tier">
+    <div class="tier tier3">
       <h3>3rd Tier: Chef’s Signature Feast</h3>
       <span class="price-tag">$90 per person</span>
       <ul>
