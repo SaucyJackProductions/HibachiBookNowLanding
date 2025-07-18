@@ -1,19 +1,95 @@
+<style>
+  #booking {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fdfdfd;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  #booking h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #222;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #e63946;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    transition: background 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: #d62828;
+  }
+
+  .tier-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .tier {
+    background: white;
+    border: 2px solid #eee;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+
+  .tier:hover {
+    transform: translateY(-5px);
+    border-color: #e63946;
+  }
+
+  .tier h3 {
+    margin-top: 0;
+    color: #1d3557;
+    font-size: 1.5em;
+  }
+
+  .tier p {
+    font-size: 1em;
+    color: #444;
+    margin: 15px 0;
+  }
+
+  .tier-tier3 {
+    margin-top: 40px;
+  }
+</style>
+
 <section id="booking">
   <h2>Choose Your Backyard Hibachi Experience</h2>
-  <a href="https://app.squareup.com/appointments/book/fv98k1yb9gn3bb/LYH17QF7SK37W/start" class="cta-button" style="display:inline-block; margin-bottom: 20px;">Book Now</a>
+  <a href="https://app.squareup.com/appointments/book/fv98k1yb9gn3bb/LYH17QF7SK37W/start" class="cta-button">Book Now</a>
 
-  <div class="tier">
-    <h3>Tier 1: Basic Flame</h3>
-    <p>Buffet-style hibachi service for up to 10 guests. Includes fried rice, grilled veggies, chicken or steak, and signature sauces. Fire show included.</p>
+  <div class="tier-wrapper">
+    <div class="tier">
+      <h3>Tier 1: Basic Flame</h3>
+      <p>Buffet-style hibachi for up to 10 guests. Includes fried rice, grilled veggies, chicken or steak, and signature sauces. Fire show included.</p>
+    </div>
+
+    <div class="tier">
+      <h3>Tier 2: Hibachi Deluxe</h3>
+      <p>Includes everything in Tier 1 plus shrimp upgrade, customized menu options, and basic sushi platter. Enhanced fire show performance included.</p>
+    </div>
   </div>
 
-  <div class="tier">
-    <h3>Tier 2: Hibachi Deluxe</h3>
-    <p>Includes everything in Tier 1 plus shrimp upgrade, customized menu options, and basic sushi platter. Enhanced fire show performance included.</p>
-  </div>
-
-  <div class="tier">
-    <h3>Tier 3: Chef’s Premium Experience</h3>
-    <p>All Tier 2 offerings plus full sushi bar upgrade, lobster tail option, private chef interaction, personalized plating, and extended entertainment show.</p>
+  <div class="tier-wrapper tier-tier3">
+    <div class="tier">
+      <h3>Tier 3: Chef’s Premium Experience</h3>
+      <p>All Tier 2 offerings plus full sushi bar upgrade, lobster tail option, private chef interaction, personalized plating, and extended entertainment show.</p>
+    </div>
   </div>
 </section>
