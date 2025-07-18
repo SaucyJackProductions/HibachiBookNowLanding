@@ -80,6 +80,26 @@
   .tier-tier3 {
     margin-top: 40px;
   }
+
+  .tier.tier1 {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAIAAADwf7zUAAEAAElEQVR4nFT9684s27IkCJmZR85dVQ1qblUNtIQQdEGL9384amW4GT/Mc+5C55wlnXWZ35eRI3y42835//w//UeCwBokGCRQADGAYs/ErzAejJ3PAMQmAiwxAbIRFSyhzU') center/cover no-repeat;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tier.tier1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+  }
+
+  .tier.tier1 * {
+    position: relative;
+    z-index: 1;
+  }
 </style>
 
 <section id="booking">
@@ -88,7 +108,7 @@
 
   <div class="tier-wrapper">
     <!-- Tier 1 -->
-    <div class="tier">
+    <div class="tier tier1">
       <h3>1st Tier: Classic Flame</h3>
       <span class="price-tag">$45 per person</span>
       <ul>
