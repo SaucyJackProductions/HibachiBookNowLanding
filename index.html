@@ -2,30 +2,31 @@
   #booking {
     text-align: center;
     padding: 50px 20px;
-    background-color: #fdfdfd;
+    background: #fffdf9;
     font-family: 'Helvetica Neue', sans-serif;
   }
 
   #booking h2 {
     font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #222;
+    color: #1d1d1d;
+    margin-bottom: 25px;
   }
 
   .cta-button {
     display: inline-block;
-    padding: 12px 24px;
-    background-color: #e63946;
-    color: white;
-    text-decoration: none;
+    background: linear-gradient(45deg, #ff3c38, #ff005c);
+    color: #fff;
     font-weight: bold;
-    border-radius: 8px;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 1.1em;
     margin-bottom: 40px;
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
   }
 
   .cta-button:hover {
-    background-color: #d62828;
+    background: linear-gradient(45deg, #d60042, #c3002f);
   }
 
   .tier-wrapper {
@@ -33,36 +34,47 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
   }
 
   .tier {
-    background: white;
-    border: 2px solid #eee;
+    background: #ffffff;
     border-radius: 16px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 300px;
+    width: 320px;
     text-align: left;
     transition: transform 0.3s ease;
   }
 
   .tier:hover {
-    transform: translateY(-5px);
-    border-color: #e63946;
+    transform: translateY(-6px);
+    border-color: #ff3c38;
   }
 
   .tier h3 {
-    margin-top: 0;
-    color: #1d3557;
     font-size: 1.5em;
+    color: #1d3557;
+    margin-bottom: 15px;
   }
 
-  .tier p {
-    font-size: 1em;
-    color: #444;
-    margin: 15px 0;
+  .tier span.price-tag {
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff005c;
+    margin-bottom: 10px;
+  }
+
+  .tier ul {
+    padding-left: 18px;
+    color: #333;
+  }
+
+  .tier ul li {
+    margin-bottom: 6px;
   }
 
   .tier-tier3 {
@@ -76,20 +88,44 @@
 
   <div class="tier-wrapper">
     <div class="tier">
-      <h3>Tier 1: Basic Flame</h3>
-      <p>Buffet-style hibachi for up to 10 guests. Includes fried rice, grilled veggies, chicken or steak, and signature sauces. Fire show included.</p>
+      <h3>1st Tier: Classic Flame</h3>
+      <span class="price-tag">$45 per person</span>
+      <ul>
+        <li><strong>Appetizer:</strong> Salad with ginger dressing, house-made soup</li>
+        <li><strong>Entrée:</strong></li>
+        <li>Fried rice with sweet peas and carrots</li>
+        <li>Vegetable mix with zucchini and onions</li>
+        <li>Choice of: Sirloin steak, chicken, or shrimp</li>
+      </ul>
     </div>
 
     <div class="tier">
-      <h3>Tier 2: Hibachi Deluxe</h3>
-      <p>Includes everything in Tier 1 plus shrimp upgrade, customized menu options, and basic sushi platter. Enhanced fire show performance included.</p>
+      <h3>2nd Tier: Fire & Flavor</h3>
+      <span class="price-tag">$65 per person</span>
+      <ul>
+        <li><strong>Appetizer:</strong> Salad with ginger dressing, house-made soup</li>
+        <li><strong>Entrée:</strong></li>
+        <li>Fried rice with sweet peas and carrots</li>
+        <li>Vegetable mix with zucchini and onions</li>
+        <li>Choice of: Filet mignon steak, chicken, or jumbo shrimp</li>
+      </ul>
     </div>
   </div>
 
   <div class="tier-wrapper tier-tier3">
     <div class="tier">
-      <h3>Tier 3: Chef’s Premium Experience</h3>
-      <p>All Tier 2 offerings plus full sushi bar upgrade, lobster tail option, private chef interaction, personalized plating, and extended entertainment show.</p>
+      <h3>3rd Tier: Chef’s Signature Feast</h3>
+      <span class="price-tag">$90 per person</span>
+      <ul>
+        <li><strong>Appetizer:</strong> Salad with ginger dressing, house-made soup</li>
+        <li><strong>Entrée:</strong></li>
+        <li>Fried rice with sweet peas and carrots</li>
+        <li>Vegetable medley with zucchini, onions, and broccoli</li>
+        <li>Filet mignon steak</li>
+        <li>Chicken</li>
+        <li>Scallops</li>
+        <li>Lobster tail</li>
+      </ul>
     </div>
   </div>
 </section>
